@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply min-h-screen bg-ink-50 text-slate-900 antialiased transition-colors duration-300;
+  background-image:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(245, 158, 11, 0.14), transparent 28%);
+}
+
+.dark body {
+  @apply bg-ink-950 text-slate-100;
+  background-image:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.15), transparent 30%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.12), transparent 28%);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+.glass-panel {
+  @apply rounded-3xl border border-white/60 bg-white/80 shadow-panel backdrop-blur-xl dark:border-white/10 dark:bg-white/5;
+}
+
+.grid-bg {
+  background-size: 20px 20px;
+  background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.15) 1px, transparent 0);
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.45);
+  border-radius: 999px;
+}
